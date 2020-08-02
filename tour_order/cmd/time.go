@@ -68,7 +68,7 @@ var calculateTimeCmd = &cobra.Command{
 		log.Printf("输出结果: %s, %d", t.Format(layout), t.Unix())
 	},
 }
-//go run main.go time calc -c="2006-01-02 15:04:05" -d=-2h
+//go run main.go time calc -d=-2h
 //go run main.go time time
 func init() {
 	timeCmd.AddCommand(nowTimeCmd)
