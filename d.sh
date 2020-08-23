@@ -1,4 +1,6 @@
 #!/bin/bash
+git pull
+
 git add -A
 
 # Commit changes.
