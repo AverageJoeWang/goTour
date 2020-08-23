@@ -10,8 +10,10 @@ func NewRouter() *gin.Engine {
 	r := gin.New()
 	r.Use(gin.Logger())
 	r.Use(gin.Recovery())
+
 	tag := v1.NewTag()
 	article := v1.NewArticle()
+
 	apiV1 := r.Group("api/v1")
 	{
 		//标签管理
