@@ -5,7 +5,7 @@ import "github.com/gin-gonic/gin"
 type Article struct{}
 
 func NewArticle() Article {
-	return Tag{}
+	return Article{}
 }
 
 func (t Article) Get(c *gin.Context) {

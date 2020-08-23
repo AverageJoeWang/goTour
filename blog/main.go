@@ -1,6 +1,7 @@
 package main
 
 import (
+	"blog/internal/routers"
 	"net/http"
 	"time"
 )
@@ -11,13 +12,13 @@ func main() {
 	// 	c.JSON(200, gin.H{"mess": "pong"})
 	// })
 	// r.Run()
-	route := routers.NewRouters()
+	router := routers.NewRouter()
 	s := &http.Server{
-		Addr:           "8080",
+		Addr:           "8081",
 		Handler:        router,
 		ReadTimeout:    10 * time.Second,
 		WriteTimeout:   10 * time.Second,
 		MaxHeaderBytes: 1 << 20,
 	}
-	s.ListenAndServe()
+	_ = s.ListenAndServe()
 }
